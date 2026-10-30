@@ -45,7 +45,7 @@ const TarjetaPrestacion = ({ titulo, imagen, descripcion, publico, requisitos })
           </div>
 
           <div>
-            <span className="font-black text-gray-900 text-base block mb-2">📄 Requisitos Documentales Extras:</span>
+            <span className="font-black text-gray-900 text-base block mb-2">📄 Requisitos Documentales específicos:</span>
             <ul className="space-y-3">
               {requisitos.map((req, i) => (
                 <li key={i} className="flex items-start gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg border border-gray-100">
