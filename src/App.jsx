@@ -122,7 +122,7 @@ export default function App() {
              Municipalidad de<br/>Hualpén / Dideco
            </h1>
            <h2 className="text-blue-200 text-lg font-bold text-center drop-shadow-md">
-             PRESTACIONES SOCIALES<br/>EN TERRENO
+             PRESTACIONES SOCIALES
            </h2>
         </div>
       </div>
