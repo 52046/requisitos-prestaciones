@@ -1,11 +1,15 @@
 import { useState } from 'react';
 
-// Importamos todas las imágenes desde la carpeta src
-import imgPortada from './portada.jpg'; // La imagen grande de la emergencia en terreno
+// Importamos las imágenes principales e íconos
+import imgPortada from './portada.jpg';
 import imgAlimentos from './alimentos.jpg';
 import imgPanales from './panales.jpg';
 import imgSuplementos from './suplementos.jpg';
-import imgCatastrofe from './catastrofe_icono.jpg'; // La casita sola con la lona azul
+import imgCatastrofe from './catastrofe_icono.jpg';
+
+// Importamos los dos logos institucionales
+import logoMuni from './logomuni.jpg';
+import logoUST from './logoust.png';
 
 const TarjetaPrestacion = ({ titulo, imagen, descripcion, publico, requisitos }) => {
   const [abierto, setAbierto] = useState(false);
@@ -16,7 +20,6 @@ const TarjetaPrestacion = ({ titulo, imagen, descripcion, publico, requisitos })
         onClick={() => setAbierto(!abierto)}
         className="w-full flex items-center p-4 relative active:bg-gray-50 focus:outline-none"
       >
-        {/* Imagen del ícono cuadrado */}
         <div className="w-20 h-20 shrink-0 bg-gray-50 rounded-xl flex items-center justify-center overflow-hidden mr-4 border border-gray-100 p-1">
           <img src={imagen} alt={titulo} className="w-full h-full object-contain" />
         </div>
@@ -30,7 +33,6 @@ const TarjetaPrestacion = ({ titulo, imagen, descripcion, publico, requisitos })
         </div>
       </button>
       
-      {/* Contenido desplegable estructurado */}
       {abierto && (
         <div className="px-5 pb-6 pt-2 bg-white border-t border-gray-100 text-left">
           
@@ -110,13 +112,22 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f3f4f6] font-sans">
       
-      {/* PORTADA ILUSTRADA CON IMAGEN GRANDE EN TERRENO */}
-      <div className="w-full relative h-[300px] shadow-md rounded-b-[2rem] overflow-hidden">
+      {/* PORTADA ILUSTRADA */}
+      <div className="w-full relative h-[340px] shadow-md rounded-b-[2.5rem] overflow-hidden">
         <img 
           src={imgPortada} 
           alt="Trabajo Social en Terreno" 
           className="w-full h-full object-cover"
         />
+
+        {/* 1. Logos en la parte superior sobre pastilla translúcida */}
+        <div className="absolute top-4 left-4 right-4 flex justify-between items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-sm border border-white/50">
+          <img src={logoMuni} alt="Municipalidad de Hualpén" className="h-9 object-contain" />
+          <div className="h-6 w-px bg-gray-300 mx-2" />
+          <img src={logoUST} alt="Santo Tomás" className="h-9 object-contain" />
+        </div>
+
+        {/* Degradado inferior con títulos */}
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-900/50 to-transparent flex flex-col justify-end p-6">
            <h1 className="text-white text-2xl font-black text-center mb-1 uppercase tracking-wide drop-shadow-lg">
              Municipalidad de<br/>Hualpén / Dideco
@@ -127,7 +138,7 @@ export default function App() {
         </div>
       </div>
 
-      <main className="max-w-md mx-auto px-4 pb-12">
+      <main className="max-w-md mx-auto px-4 pb-8">
         
         {/* Botonera de Información superpuesta */}
         <div className="flex justify-between gap-3 mb-6 -mt-6 relative z-10">
@@ -145,7 +156,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* Requisitos Generales - Bloque de Alerta */}
+        {/* Requisitos Generales */}
         <section className="bg-[#fff9d6] rounded-2xl p-5 mb-6 shadow-md border border-yellow-200">
           <h2 className="font-black text-yellow-900 text-base mb-2 uppercase tracking-tight flex items-center gap-2">
             ⚠️ REQUISITOS GENERALES (RSH 40%)
@@ -157,12 +168,26 @@ export default function App() {
         </section>
 
         {/* Catálogo de Prestaciones */}
-        <section className="flex flex-col">
+        <section className="flex flex-col mb-8">
           <h2 className="font-black text-gray-800 text-lg mb-4 px-2">Seleccione una ayuda social:</h2>
           {prestaciones.map((prestacion, index) => (
             <TarjetaPrestacion key={index} {...prestacion} />
           ))}
         </section>
+
+        {/* 2. Footer Institucional y Académico */}
+        <footer className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm text-center">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            Iniciativa de Trabajo Social en Terreno
+          </p>
+          <div className="flex items-center justify-center gap-6 mb-3">
+            <img src={logoMuni} alt="Municipalidad de Hualpén" className="h-10 object-contain" />
+            <img src={logoUST} alt="Santo Tomás" className="h-10 object-contain" />
+          </div>
+          <p className="text-xs text-gray-400">
+            Desarrollado para la Dirección de Desarrollo Comunitario (DIDECO)
+          </p>
+        </footer>
 
       </main>
     </div>
