@@ -179,14 +179,14 @@ export default function App() {
         {/* 2. Footer Institucional y Académico */}
         <footer className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm text-center">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-            Iniciativa de Trabajo Social en Terreno
+            Iniciativa de Trabajo Social
           </p>
           <div className="flex items-center justify-center gap-6 mb-3">
             <img src={logoMuni} alt="Municipalidad de Hualpén" className="h-10 object-contain" />
             <img src={logoUST} alt="Santo Tomás" className="h-10 object-contain" />
           </div>
           <p className="text-xs text-gray-400">
-            Desarrollado para la Dirección de Desarrollo Comunitario (DIDECO)
+            Desarrollado para la Dirección de Desarrollo Comunitario (DIDECO) por Scottie Martínez
           </p>
         </footer>
 
