@@ -186,7 +186,7 @@ export default function App() {
             <img src={logoUST} alt="Santo Tomás" className="h-10 object-contain" />
           </div>
           <p className="text-xs text-gray-400">
-            Desarrollado para la Dirección de Desarrollo Comunitario (DIDECO) por Scottie Martínez, Alumna en práctica de la carrera de Trabajo Social, Universidad Santo Tomás, sede Concepción.
+            Desarrollado para la Dirección de Desarrollo Comunitario (DIDECO) por Scottie Martínez, Alumna en práctica de la carrera de Servicio Social, Instituto Profesional Santo Tomás, sede Concepción.
           </p>
         </footer>
 
