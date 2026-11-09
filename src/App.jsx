@@ -67,7 +67,7 @@ export default function App() {
     {
       titulo: "Canasta Básica de Alimentos",
       imagen: imgAlimentos,
-      descripcion: "Ayuda para cubrir necesidades básicas de alimentos frente a situaciones de crisis. Se puede solicitar cada 6 meses (se debe renovar documentación).",
+      descripcion: "Ayuda para cubrir necesidades básicas de alimentos frente a situaciones de crisis(se debe renovar documentación).",
       publico: "Familias vulnerables que enfrentan cesantía, enfermedad o disminución drástica de ingresos.",
       requisitos: [
         "Entrevista de evaluación socioeconómica presencial al momento de solicitar.",
@@ -151,7 +151,7 @@ export default function App() {
             ⚠️ REQUISITOS GENERALES (RSH 40%)
           </h2>
           <p className="text-sm text-yellow-800 font-bold leading-relaxed">
-            Cédula de Identidad de quien solicita y del Jefe de Hogar + Cartola del RSH hasta el 40%. 
+            Cédula de Identidad de quien solicita y del Jefe de Hogar + Cartola del RSH hasta el 40% perteneciente a la comuna de Hualpén. 
             <span className="font-medium text-yellow-700 block mt-1"> (La cartola se puede imprimir directamente en el municipio si no la trae).</span>
           </p>
         </section>
