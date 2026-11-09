@@ -65,32 +65,32 @@ const TarjetaPrestacion = ({ titulo, imagen, descripcion, publico, requisitos })
 export default function App() {
   const prestaciones = [
     {
-      titulo: "Cajas de Alimentos",
+      titulo: "Canasta Básica de Alimentos",
       imagen: imgAlimentos,
-      descripcion: "Ayuda para cubrir necesidades nutricionales básicas frente a situaciones de crisis. Se puede solicitar cada 6 meses (se debe renovar documentación).",
+      descripcion: "Ayuda para cubrir necesidades básicas de alimentos frente a situaciones de crisis. Se puede solicitar cada 6 meses (se debe renovar documentación).",
       publico: "Familias vulnerables que enfrentan cesantía, enfermedad o disminución drástica de ingresos.",
       requisitos: [
         "Entrevista de evaluación socioeconómica presencial al momento de solicitar.",
-        "Documento de respaldo económico: finiquito, boletas impagas, liquidación de pensión, certificado de alumno regular o comprobante de pensión de alimentos."
+        "Documento de respaldo económico: finiquito, boletas de gastos básicos (agua, luz, etc), liquidación de pensión, certificado de alumno regular o comprobante de pensión de alimentos."
       ]
     },
     {
       titulo: "Pañales (Niño / Adulto)",
       imagen: imgPanales,
-      descripcion: "Apoyo con paquetes de pañales entregados de forma mensual o trimestral, según evaluación.",
+      descripcion: "Apoyo de pañales entregados según evaluación médica.",
       publico: "Personas con dependencia severa, postración o incontinencia.",
       requisitos: [
         "Para Menores de 18 años: Documento que acredite la condición, carnet de niño sano y credencial de discapacidad (si aplica).",
-        "Para Adultos: Certificado médico que justifique clínicamente el uso del pañal (debe actualizarse cada 3 meses)."
+        "Para Adultos: Certificado médico que justifique clínicamente el uso del pañal."
       ]
     },
     {
       titulo: "Suplementos Alimenticios",
       imagen: imgSuplementos,
-      descripcion: "Entrega de fórmulas lácteas (Ensure o Pediasure) para la recuperación o mantención de la salud. Entrega mensual o trimestral.",
+      descripcion: "Entrega de fórmulas lácteas para la recuperación o mantención de la salud.",
       publico: "Personas con déficit nutricional, bajo peso o enfermedades crónicas.",
       requisitos: [
-        "Receta médica de la red de salud pública indicando el suplemento y la dosis diaria (debe actualizarse cada 3 meses).",
+        "Receta médica de la red de salud pública indicando el suplemento y la dosis diaria (debe actualizar receta según requerimiento).",
         "Carnet de control de salud crónico o documento de derivación de nutricionista."
       ]
     },
@@ -101,7 +101,7 @@ export default function App() {
       publico: "Hogares siniestrados o afectados por emergencias habitacionales.",
       requisitos: [
         "Llamar de inmediato al *4155 para reportar la emergencia al municipio.",
-        "Aplicación de Ficha Básica de Emergencia (FIBE) en el domicilio tras el aviso.",
+        "Aplicación de Ficha Básica de Emergencia (FIBE) solo en alerta roja y amarilla",
         "La entrega está sujeta a la evaluación técnica en terreno por parte de Trabajo Social. (Excepción: Este trámite NO exige tener hasta el 40% en el RSH)."
       ]
     }
