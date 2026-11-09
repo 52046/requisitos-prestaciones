@@ -121,11 +121,12 @@ export default function App() {
         />
 
         {/* 1. Logos en la parte superior sobre pastilla translúcida */}
-        <div className="absolute top-4 left-4 right-4 flex justify-between items-center bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-sm border border-white/50">
-          <img src={logoMuni} alt="Municipalidad de Hualpén" className="h-9 object-contain" />
-          <div className="h-6 w-px bg-gray-300 mx-2" />
-          <img src={logoUST} alt="Santo Tomás" className="h-9 object-contain" />
-        </div>
+        {/* Logos en la parte superior sobre pastilla blanca */}
+<div className="absolute top-4 left-4 right-4 flex justify-between items-center bg-white/95 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-md border border-white/60">
+  <img src={logoMuni} alt="Municipalidad de Hualpén" className="h-14 object-contain max-w-[45%]" />
+  <div className="h-8 w-px bg-gray-300 mx-3" />
+  <img src={logoUST} alt="Santo Tomás" className="h-14 object-contain max-w-[45%]" />
+</div>
 
         {/* Degradado inferior con títulos */}
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-900/50 to-transparent flex flex-col justify-end p-6">
